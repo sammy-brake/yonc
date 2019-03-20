@@ -9,7 +9,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/' do
-  "Welcome to Onion Rings Group for Yonc!"
+
 
   erb :"/index"
   end
