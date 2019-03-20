@@ -2,7 +2,7 @@ class ReviewsController < ApplicationController
 
   get "/reviews" do
     @reviews = Review.all
-    @user = current_user
+    @user = User.find_by(id: session[:user_id])
     erb :"/reviews/index"
   end
 

@@ -1,1 +1,90 @@
-<%=yield%>
+
+<style>
+#header-img {
+  width: 100px;
+}
+
+#header {
+  display: flex;
+  margin-left: 10px;
+}
+nav {
+  display: flex;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 500;
+}
+h1 {
+  font-family: 'Fredericka the Great', cursive;
+  margin-left: 20px;
+  font-size: 40px;
+  color: gray;
+  align-self: center;
+}
+#orgy {
+  padding: 70px;
+  font-size: 40px;
+}
+#expl {
+  font-size: 20px;
+}
+a {
+  align-self: center;
+  justify-self: flex-end;
+  margin-left: 150px;
+  font-size: 30px;
+  font-family: 'Fredericka the Great', cursive;
+ color: black;
+}
+.right {
+  display: flex;
+  padding: 40px;
+}
+.nav-link {
+  display: flex;
+
+
+}
+h2 {
+ padding: 50px;
+ font-family: 'Fredericka the Great', cursive;
+}
+
+#video {
+  position: relative;
+  left: 400px;
+}
+</style>
+
+
+<link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+
+
+<header id="header">
+  <nav id="nav-bar">
+  <img src="https://www.displayfakefoods.com/store/pc/catalog/2712_2064_general.jpg" id="header-img" alt="onion ring logo">
+    <h1>Yonc</h1>
+   <div class="right">
+    <a href="/tutorial" class="nav-link"> Make Your Own Rings </a>
+   <a href="/reviews" class="nav-link"> Read Reviews </a>
+   <a href="/signup" class="nav-link"> Sign Up     </a>
+    </div>
+  </nav>
+
+</header>
+
+<main>
+  <hr>
+  <h2 align="center" id="orgy"> Onion Ring Group for Yonc </h2>
+  <%=yield%>
+<hr>
+
+
+</div>
+
+</main>
+<footer>
+</footer>
