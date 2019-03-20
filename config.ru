@@ -1,6 +1,6 @@
 require_relative './config/environment'
 
 use Rack::MethodOverride
-# use UserController
-# use RestaurantReviewController
+# use UsersController
+# use RingsReviewsController
 run ApplicationController
