@@ -1,2 +1,2 @@
-class RingsReviews < ApplicationController
+class RingsReviewsController < ApplicationController
 end
