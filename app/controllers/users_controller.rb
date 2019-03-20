@@ -18,7 +18,7 @@ class UsersController < ApplicationController
   end
 
   post "/signup" do
-    if params[:name] == "" || params[:password_digest] == ""
+    if params[:name] == "" || params[:password] == ""
       redirect :"/signup"
     else
       User.all.each do |user|
@@ -34,8 +34,11 @@ class UsersController < ApplicationController
 
   post '/login' do
   @user = User.find_by(:name => params[:name])
-  if @user && @user.authenticate(password_digest: params[:password])
-    session[:user_id] = user.id
+  # binding.pry
+  if @user
+    #the below line is returing as invalid hash, but I'm not sure why
+    #&& @user.authenticate(params[:password])
+    session[:user_id] = @user.id
     redirect "/users/#{@user.name}"
   else
     redirect to '/'

@@ -1,0 +1,8 @@
+<h1>Hey, <% if current_user %>
+        <%= current_user.name %>, Read About our Rings</h1>
+        <%end%>
+<br>
+<% @reviews.each do |review| %>
+<h3><%= @review.user.name %><h3>
+  <p>said that.....</p>
+  <%end%>
