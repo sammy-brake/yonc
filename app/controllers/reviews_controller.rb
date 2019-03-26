@@ -42,8 +42,21 @@ class ReviewsController < ApplicationController
     @review = Review.find_by_id(params[:id])
     @review.update(location: params[:location], review: params[:review], date: params[:date])
     @review.save
-
     redirect :"/reviews/#{@review.id}"
+  end
+
+  delete "/reviews/:id/delete" do
+    if logged_in?
+      @review = Review.find_by_id(params[:id])
+      if @review && @review.user == current_user
+        @review.delete
+        redirect "/users/#{@review.user.name}"
+      else
+        redirect "/reviews"
+      end
+    else
+      redirect "/"
+    end
   end
 
 
