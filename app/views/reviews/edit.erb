@@ -1,6 +1,6 @@
 <h1>Edit your Rings Opinion</h1>
 <form method="POST" action="/new">
-  ##need the blank
+  <input id="hidden" type="hidden" name="_method" value="PATCH">
   <label>Location of Rings</label><input type="text" name="location" value="<%=@review.location%>"><br><br>
   <label>Date:</label><input type="text" name="date" value="<%=@review.date%>"><br><br>
   <label>Review</label><input type="text" name="review" value="<%=@review.review%>"><br><br>
