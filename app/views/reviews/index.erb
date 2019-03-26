@@ -1,14 +1,16 @@
 <h1 align="center">Hey, Read About our Rings</h1>
 
 <% @reviews_list = @reviews.uniq %>
-<ul>
+
 <% @reviews_list.each do |review| %>
-<li>
-<h3><%= review.location %></h3>
+
+<h2><%= review.location %></h2>
 <h5><%= review.date %></h5>
-<p><%= review.review %></p>
+<h3><%= review.review %></h3>
 <p>---submitted by <%=review.user.name%></p>
+<% if review.user.name == current_user.name %>
+<a href="reviews/<%=review.id%>/edit">Edit</a>
+<%end%>
 <hr>
-</li>
 <%end%>
 </ul>
