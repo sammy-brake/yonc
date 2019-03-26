@@ -50,7 +50,7 @@ footer a {
   font-size: 20px;
   color: black;
 
-  padding-left: 1200px;
+  /*padding-left: 800px;*/
 }
 .right {
   display: flex;
@@ -95,7 +95,7 @@ h2 {
 
 </main>
 <footer>
-
+  <% if logged_in? %>
   <p><a href="/logout">Log Out</a></p>
-
+  <% end %>
 </footer>
