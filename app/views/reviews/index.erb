@@ -4,9 +4,9 @@
 
 <% @reviews_list.each do |review| %>
 
-<h2><%= review.location %></h2>
+<h3><%= review.location %></h3>
 <h5><%= review.date %></h5>
-<h3><%= review.review %></h3>
+<p><%= review.review %></p>
 <p>---submitted by <%=review.user.name%></p>
 <% if review.user.name == current_user.name %>
 <a href="reviews/<%=review.id%>/edit">Edit</a>

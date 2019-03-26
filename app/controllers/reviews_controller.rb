@@ -39,9 +39,11 @@ class ReviewsController < ApplicationController
   end
 
   patch "/reviews/:id" do
+
     @review = Review.find_by_id(params[:id])
     @review.update(location: params[:location], review: params[:review], date: params[:date])
     @review.save
+
     redirect :"/reviews/#{@review.id}"
   end
 
