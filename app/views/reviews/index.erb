@@ -8,7 +8,7 @@
 <h5><%= review.date %></h5>
 <p><%= review.review %></p>
 <p>---submitted by <%=review.user.name%></p>
-<% if review.user.name == current_user.name %>
+<% if logged_in? && review.user.name == current_user.name %>
 <a href="reviews/<%=review.id%>/edit">Edit</a>
 <form method="post" action="/reviews/<%=review.id%>/delete">
   <input id="hidden" type="hidden" name="_method" value="DELETE">
