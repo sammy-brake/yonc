@@ -10,7 +10,7 @@
 <p>---submitted by <%=review.user.name%></p>
 <% if review.user.name == current_user.name %>
 <a href="reviews/<%=review.id%>/edit">Edit</a>
-<form method="post" action="/reviews/<%=@review.id%>/delete">
+<form method="post" action="/reviews/<%=review.id%>/delete">
   <input id="hidden" type="hidden" name="_method" value="DELETE">
   <input type="submit" value="Delete Review">
 </form>
