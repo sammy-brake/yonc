@@ -2,7 +2,6 @@ class ReviewsController < ApplicationController
 
   get "/reviews" do
     @reviews = Review.all
-    binding.pry
     @user = User.find_by(id: session[:user_id])
     erb :"/reviews/index"
   end
