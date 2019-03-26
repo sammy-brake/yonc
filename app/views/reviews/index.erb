@@ -1,1 +1,6 @@
 <h1 align="center">Hey, Read About our Rings</h1>
+
+<% @reviews_list = @reviews.uniq %>
+<% @reviews_list.each do |review| %>
+<p><%= review.location %></p>
+<%end%>

@@ -2,6 +2,7 @@ class ReviewsController < ApplicationController
 
   get "/reviews" do
     @reviews = Review.all
+    binding.pry
     @user = User.find_by(id: session[:user_id])
     erb :"/reviews/index"
   end
@@ -16,10 +17,10 @@ class ReviewsController < ApplicationController
   end
 
   post "/new" do
-    if params[:location] == "" || params[:review] == ""
+    if params[:location] == "" || params[:review] == "" || params[:date] == ""
       redirect :"/reviews/new"
     else
-      @review = Review.new(location: params[:location], review: params[:review])
+      @review = Review.new(location: params[:location], review: params[:review], date: params[:date])
       @review.user = User.find_by(id: session[:user_id])
        @review.save
       #don't save until everything is set up
