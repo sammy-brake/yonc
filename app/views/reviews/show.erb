@@ -3,6 +3,6 @@
 <h4><%=@review.location%></h4>
 <p><%=@review.review%></p>
 
-<% if review.user.name == current_user.name %>
-<a href="reviews/<%=review.id%>/edit">Edit</a>
+<% if @review.user.name == current_user.name %>
+<a href="/reviews/<%=@review.id%>/edit">Edit</a>
 <%end%>
