@@ -33,4 +33,9 @@ class ReviewsController < ApplicationController
     erb :"/reviews/show"
   end
 
+  get "/reviews/:id/edit" do
+    @review = Review.find_by_id(params[:id])
+    erb :"/reviews/#{params[:id]}/edit}"
+  end
+
 end
