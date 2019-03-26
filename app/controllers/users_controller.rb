@@ -13,6 +13,7 @@ class UsersController < ApplicationController
   end
 
   get "/users/:name" do
+    # binding.pry
     @user = User.find_by(name: params[:name])
     erb :"/users/show"
   end
