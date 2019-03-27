@@ -80,9 +80,12 @@ h2 {
    <div class="right">
     <a href="/tutorial" class="nav-link">Rings Tutorial</a>
    <a href="/reviews" class="nav-link">Read Reviews</a>
-   <a href="/login" class="nav-link">Log In</a>
+
+
    <% if logged_in? %>
    <a href="/users/<%=current_user.name%>">User Home               </a>
+   <% else %>
+    <a href="/login" class="nav-link">Log In</a>
    <%end%>
     </div>
   </nav>
